@@ -1,0 +1,22 @@
+[project]
+name = "ragagentbot"
+version = "0.1.0"
+description = "Minimal baseline for the RAGAgentBot project"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "httpx>=0.28.0",
+    "python-multipart>=0.0.20",
+    "pypdf>=5.0.0",
+    "pytest>=8.3.0",
+    "reportlab>=4.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

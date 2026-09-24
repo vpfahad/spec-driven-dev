@@ -3,7 +3,7 @@
 ## Guiding Principle
 Build the product in very small, testable phases. Each phase should produce a working improvement, provide a clear validation checkpoint, and keep the scope narrow enough to reduce risk.
 
-## Phase 0 — Project Setup and Baseline
+## Phase 0 — Project Setup and Baseline [Complete]
 Goal: establish the repository and initial working environment.
 
 Deliverables:
@@ -15,9 +15,11 @@ Deliverables:
 Checkpoint:
 - The project runs in a clean local environment without blocking setup issues.
 
+Status: Complete — the repository baseline was created and verified with a local smoke test.
+
 ---
 
-## Phase 1 — Single PDF Ingestion
+## Phase 1 — Single PDF Ingestion [Complete]
 Goal: create a working upload and extraction flow for one PDF.
 
 Deliverables:
@@ -28,6 +30,8 @@ Deliverables:
 
 Checkpoint:
 - A PDF can be loaded and its text extracted into a usable form.
+
+Status: Complete — uploaded PDFs are validated, parsed, and their extracted text is returned for use in later retrieval stages.
 
 ---
 
