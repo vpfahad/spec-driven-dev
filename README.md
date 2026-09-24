@@ -258,6 +258,25 @@ This should help reduce situations where less-relevant document sections are giv
 
 ---
 
+# 8. Current API Baseline
+
+The current baseline exposes a FastAPI service with a PDF upload endpoint:
+
+- `POST /api/v1/documents/upload`
+
+Form fields:
+
+- `file` (required): PDF file upload
+- `chunk_size` (optional, default `800`): max characters per chunk, minimum `100`
+- `chunk_overlap` (optional, default `120`): overlap between adjacent chunks, must be `< chunk_size`
+
+Behavior:
+
+- Rejects non-PDF files and unreadable/corrupted PDFs with clear error messages.
+- Extracts text page-by-page.
+- Normalizes text (encoding + whitespace cleanup).
+- Chunks text with overlap while preserving per-page metadata.
+
 # 8. Answer Generation
 
 After the relevant document content has been retrieved and reranked, the selected context will be provided to an Ollama-hosted language model.

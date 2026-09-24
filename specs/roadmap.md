@@ -39,8 +39,9 @@ Status: Complete — uploaded PDFs are validated, parsed, and their extracted te
 Goal: convert raw extracted text into searchable chunks.
 
 Deliverables:
-- Text cleaning and normalization.
-- Chunking strategy for sections, paragraphs, or token windows.
+- Minimal text cleaning and normalization.
+- Use recursive text splitting rather than implementing a complex custom chunking algorithm.
+- A reasonable starting point is chunk size of approximately 800–1,000 tokens with 10–20% overlap.
 - Metadata tracking for chunk origin and order.
 
 Checkpoint:
